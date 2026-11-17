@@ -119,7 +119,7 @@ def graflin2(df):
 
 
 def cajatemp(df, x,titulo):
-    plt.figure(figsize=(15,5))
+    plt.figure(figsize=(9,3))
 
     sns.boxplot(data = df, x = x, y= "Genre2" , fill = True   ,hue = "Yearcat",showmeans=True,  meanprops={
             "marker": "o",

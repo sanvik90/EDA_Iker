@@ -9,7 +9,6 @@ from scipy.stats import spearmanr
 import Funciones as f
 sns.set_theme(style="whitegrid")   # Fondo oscuro con cuadrícula
 
-print("Empezando a crear gráficos")
 
 #Cargar datos
 df = pd.read_csv(r"C:\Users\Iker\Documents\Bootcamp\EDA_Iker_OK\EDA_Iker\ClassicHit.csv")
