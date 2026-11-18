@@ -51,26 +51,4 @@ Python 3
 pandas, numpy
 matplotlib, seaborn
 scipy (correlaciones de Pearson y Spearman)
-▶️ Cómo ejecutarlo
-bash
-# 1. Clonar el repositorio
-git clone https://github.com/sanvik90/EDA_Iker.git
-cd EDA_Iker
 
-# 2. Instalar dependencias
-pip install pandas numpy matplotlib seaborn scipy jupyter
-
-# 3. Abrir el notebook
-jupyter notebook EDA_NOTEBOOK_LIMPIO.ipynb
-
-⚠️ Ruta del CSV: el notebook carga los datos con una ruta absoluta de Windows. Antes de ejecutarlo, cámbiala por una ruta relativa:
-
-python
-df = pd.read_csv("ClassicHit.csv")
-⚠️ Limitaciones
-Los atributos de Spotify son estimaciones algorítmicas, no mediciones objetivas.
-A partir de 2010 hay menos canciones por año, lo que genera mayor variabilidad.
-Las correlaciones no implican causalidad; las interpretaciones socioculturales son hipótesis a contrastar.
-👤 Autor
-
-Iker — proyecto de EDA realizado durante el bootcamp.
