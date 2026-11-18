@@ -11,7 +11,7 @@ sns.set_theme(style="whitegrid")   # Fondo oscuro con cuadrícula
 
 
 #Cargar datos
-df = pd.read_csv(r"C:\Users\Iker\Documents\Bootcamp\EDA_Iker_OK\EDA_Iker\ClassicHit.csv")
+df = pd.read_csv("EDA_Iker/ClassicHit.csv")
 df = df[df["Year"] > 1970]
 df = df[df["Year"] < 2015]
 
