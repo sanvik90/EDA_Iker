@@ -24,6 +24,8 @@ f.cajsol(df,"Loudness")
 f.cajsol(df,"Energy")
 f.cajsol(df, "Valence")
 f.cajsol(df,"Danceability")
+f.cajsol(df,"Popularity")
+
 print("Graficos monovariable creados")
 
 

@@ -50,6 +50,8 @@ medianas2 = df.groupby("Key")[["Valence","Energy","Danceability","Speechiness","
 medianas3 = df.groupby("Time_Signature")[["Valence","Energy","Danceability","Speechiness","Acousticness","Instrumentalness","Liveness","Popularity"]].median()
 medianas4 = df.groupby("Genre")[["Mode"]].mean()
 medianas5= df.groupby("Mode")[["Valence","Energy","Danceability","Speechiness","Acousticness","Instrumentalness","Liveness","Popularity"]].median()
+
+
 variablesmat = ["Year","Loudness","Valence","Energy","Acousticness","Danceability","Tempo","Instrumentalness","Speechiness","Popularity"]
 corr = df[variablesmat].corr("spearman")
 
