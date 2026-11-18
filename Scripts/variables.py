@@ -17,9 +17,9 @@ df = df[df["Year"] < 2015]
 
 df["Yearcat"] = pd.cut(
     df["Year"],
-    bins=[1969,1979, 1990, 1999, 2015],
-    labels=["1970-1979", "1980-1990", "1991-2000", "2000-2015"]
-)
+    bins=[1969, 1979, 1989, 1999, 2015],
+    labels=["1970-1979", "1980-1989", "1990-1999", "2000-2015"])
+
 
 df["Genre2"] = np.select(
     [
@@ -49,7 +49,7 @@ medianas1 = df.groupby("Genre")[["Valence","Energy","Danceability","Speechiness"
 medianas2 = df.groupby("Key")[["Valence","Energy","Danceability","Speechiness","Acousticness","Instrumentalness","Liveness","Popularity"]].median()
 medianas3 = df.groupby("Time_Signature")[["Valence","Energy","Danceability","Speechiness","Acousticness","Instrumentalness","Liveness","Popularity"]].median()
 medianas4 = df.groupby("Genre")[["Mode"]].mean()
-
+medianas5= df.groupby("Mode")[["Valence","Energy","Danceability","Speechiness","Acousticness","Instrumentalness","Liveness","Popularity"]].median()
 variablesmat = ["Year","Loudness","Valence","Energy","Acousticness","Danceability","Tempo","Instrumentalness","Speechiness","Popularity"]
 corr = df[variablesmat].corr("spearman")
 

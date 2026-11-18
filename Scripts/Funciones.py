@@ -11,6 +11,8 @@ from matplotlib.animation import FuncAnimation, PillowWriter
 
 
 def cajsol(df,x):
+    ''' cajasol da un boxplot de una sola variable
+    necesita de un data frame y una serie de vairables'''
     plt.figure(figsize=(6, 1))
     sns.boxplot(data=df, x=x, fill=False)
     ruta = os.path.join("EDA_Iker", "Gráficas", f"cajasol{x}.png")
@@ -19,6 +21,7 @@ def cajsol(df,x):
     return
 
 def medianas(medianas,nombre,titulo):
+    ''' medianas da un mapa de medianas de una serie de variables'''
     plt.figure(figsize=(13, 6))  # (ancho, alto) en pulgadas
     sns.heatmap(
         medianas,
@@ -39,6 +42,8 @@ def medianas(medianas,nombre,titulo):
 
 
 def mediasmodo(medianas):
+    ''' Esta es una variable especifca para un grafico en especifico.
+    Por ello solo tiene un argumento'''
     plt.figure(figsize=(13, 6))  # (ancho, alto) en pulgadas
     sns.heatmap(
         medianas,
@@ -58,7 +63,7 @@ def mediasmodo(medianas):
     return 
 
 def matcorr(corr):
-    
+    """mator devuelve un hetmap para  una matriz de correlaciones dada"""
 
     plt.figure(figsize=(12, 5))
 
@@ -78,6 +83,7 @@ def matcorr(corr):
     return 
 
 def graflin(df,y,titulo):
+    """ graflin da un grafico de lineas"""
     plt.figure(figsize=(12,5))
     sns.lineplot(data = df, x = "Year" , y = y , hue = "Genre2", palette = "colorblind", estimator="mean", errorbar=("ci", 90))
     plt.title(titulo)
@@ -88,6 +94,7 @@ def graflin(df,y,titulo):
 
 
 def graflin2(df):
+    '''graflin2 está pensado para un gráfico especifco.'''
     plt.figure(figsize=(12,5))
 
     sns.lineplot(
@@ -103,7 +110,7 @@ def graflin2(df):
     plt.xlim(1996, 2010)
 
     plt.title(
-        "Evolución de Valence a lo largo de los años. "
+        "Evolución de Evolución de la  positividad percibida por Spotify a lo largo de los años. "
         "Ciclo de guerra de Irak: Country vs resto de géneros"
     )
 
@@ -119,7 +126,8 @@ def graflin2(df):
 
 
 def cajatemp(df, x,titulo):
-    plt.figure(figsize=(9,3))
+    ''' cajatemp nos da un grafico de cajas para los géneros que hemos definido en Genre2 y los años que hemos definido en Yearcat'''
+    plt.figure(figsize=(12,5))
 
     sns.boxplot(data = df, x = x, y= "Genre2" , fill = True   ,hue = "Yearcat",showmeans=True,  meanprops={
             "marker": "o",
@@ -142,6 +150,9 @@ def cajatemp(df, x,titulo):
 
 
 def densi(df,x,titulo):
+    ''' devuelve un gráfico de densidad de cada año por la variable dada. 
+    la función pide un titu'''
+    
     #plt.style.use("dark_background")
 
     plt.figure(figsize=(9,3))
@@ -155,7 +166,8 @@ def densi(df,x,titulo):
 
 
 def popugen(df, x):
-
+    ''' Nos muestra un grafico de barras con que géneros tienen una corelación significativa al 0.001 del coeficiente Sperman entre el 
+    atributo pedido y popularidad.'''
     resultados = []
 
     for genero, subset in df.groupby("Genre"):
@@ -190,6 +202,7 @@ def popugen(df, x):
 
 
 def densi_gif(df, x):
+    ''' Densigif hace un gif dednsi, con un frame por año'''
 
     years = sorted(df["Year"].dropna().unique())
 
