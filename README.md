@@ -31,14 +31,14 @@ Reescalado: los atributos de Spotify (0–1) pasan a escala 0–100 y Duration s
 Estadísticos robustos: al haber outliers, se trabaja principalmente con medianas. El modo (binario) se resume con su media, que equivale a la proporción de canciones en modo mayor.
 🔬 Hipótesis planteadas
 	Hipótesis
-H1	La tonalidad y el modo no afectan significativamente a los atributos musicales.
-H2	El compás influye ligeramente en los atributos musicales.
-H3	Ha aumentado el volumen percibido (loudness).
-H4	Ha disminuido la positividad percibida (valence).
-H5	Ha aumentado la energía (energy).
-H6	Estos cambios son más intensos en el género Metal.
-H7	Algunos géneros tienen evoluciones propias contextualizables socio-históricamente.
-H8	Los factores que determinan la popularidad varían según el género.
+*H1	La tonalidad y el modo no afectan significativamente a los atributos musicales.
+*H2	El compás influye ligeramente en los atributos musicales.
+*H3	Ha aumentado el volumen percibido (loudness).
+*H4	Ha disminuido la positividad percibida (valence).
+*H5	Ha aumentado la energía (energy).
+*H6	Estos cambios son más intensos en el género Metal.
+*H7	Algunos géneros tienen evoluciones propias contextualizables socio-históricamente.
+*H8	Los factores que determinan la popularidad varían según el género.
 📈 Principales resultados
 Tonalidad y modo: apenas aportan información discriminativa. El compás 4/4 sí se asocia con valores más altos de valence, energy y danceability.
 Volumen: pasa de poco más de −12 dB en 1970 a cerca de −6 dB en 2015. El salto se concentra entre 1990 y mediados de los 2000, y afecta incluso a las canciones más "suaves".
