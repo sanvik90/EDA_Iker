@@ -32,9 +32,10 @@ EDA_Iker/
 │   ├── Main.py                     # Script principal
 │   ├── Funciones.py                # Funciones auxiliares
 │   └── Variables.py                # Variables y constantes
-├── ClassicHit.csv                  # Dataset original
+├── ClassicHit.csv               # Dataset original
 ├── EDA_NOTEBOOK_LIMPIO.ipynb       # Notebook principal con todo el análisis
-├── Notebook_Pruebas.ipynb          # Notebook de pruebas
+├── Notebook_Pruebas.ipynb
+├── Presentación.pdf   
 └── README.md
 ```
 
